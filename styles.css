@@ -2,6 +2,11 @@
 	box-sizing: border-box;
 }
 
+:root {
+	--clr-alive: #121113;
+	--clr-background: whitesmoke;
+}
+
 html {
 	height: 100%;
 }
@@ -9,7 +14,7 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #121113;
+	background-color: var(--clr-background);
 	display: grid;
 	place-content: center;
 	height: 100%;
@@ -27,6 +32,13 @@ body {
 }
 
 #root * {
-	background-color: whitesmoke;
+	background-color: var(--clr-alive);
 	border-radius: var(--gap);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--clr-alive: whitesmoke;
+		--clr-background: #121113;
+	}
 }

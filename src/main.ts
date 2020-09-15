@@ -27,7 +27,7 @@ function main() {
 		for (let i = 0; i < GRID_SIZE; i++) {
 			for (let j = 0; j < GRID_SIZE; j++) {
 				cells[i][j].style.backgroundColor =
-					generation.value[i][j] ? 'whitesmoke' : 'transparent';
+					generation.value[i][j] ? 'var(--clr-alive)' : 'transparent';
 			}
 		}
 	}
