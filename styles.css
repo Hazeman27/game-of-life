@@ -1,0 +1,32 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #121113;
+	display: grid;
+	place-content: center;
+	height: 100%;
+}
+
+#root {
+	--cell-size: 10px;
+	--grid-size: 24;
+	--gap: calc(var(--cell-size) * .3);
+	
+	display: grid;
+	grid-template-columns: repeat(var(--grid-size), var(--cell-size));
+	grid-template-rows: repeat(var(--grid-size), var(--cell-size));
+	gap: var(--gap);
+}
+
+#root * {
+	background-color: whitesmoke;
+	border-radius: var(--gap);
+}

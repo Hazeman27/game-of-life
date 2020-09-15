@@ -1,0 +1,9 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"watch": true,
+		"sourceRoot": "./src",
+		"outDir": "./out",
+		"sourceMap": true
+	}
+}
