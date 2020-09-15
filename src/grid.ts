@@ -1,5 +1,5 @@
 import { array2D, copy2DArray } from './array2d.js';
-import randomInt from './random.js';
+import randomInt from './randomInt.js';
 
 
 function *grid(size = 10) {
@@ -38,13 +38,7 @@ function *grid(size = 10) {
 
 				if (Math.random() < 0.008) {
 					const timeout = randomInt(1000, 1);
-
-					setTimeout(() => {
-						const randomRow = (row + Math.floor(Math.random() * size)) % size;
-						const randomCol = (col + Math.floor(Math.random() * size)) % size;
-
-						state[randomRow][randomCol] = true;
-					}, timeout);
+					setTimeout(() => state[row][col] = true, timeout);
 				}
 			}
 		}
